@@ -1,0 +1,110 @@
+# file name: monyako.py
+
+<SenotloloSephara@ButtonBehavior+Label>:
+	font_size: 16
+	
+<FMonyako>:
+	id: fm
+	orientation: 'vertical'
+	spacing: 10
+	space_x: self.size[0]
+	canvas.before:
+		Color:
+			rgba: (.1,.2,.1, 1)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+	BoxLayout:
+		size_hint_y: None
+		height: 50
+		canvas.before:
+			Color:
+				rgba: (.06,.45,.45, 1)
+			Rectangle:
+				size: self.size	
+				pos: self.pos
+		Label:
+			text: "Monyako"
+			bold: True
+			size_hint_x: .9
+			
+		SenotloloSephara:
+			text: "x"
+			size_hint_x: .1
+
+	BoxLayout:
+	
+		BoxLayout:
+			orientation: "vertical"
+				AsyncImage:
+					size_hint_x: .2
+					source: '../3f.png'
+					size: self.texture_size
+			
+		BoxLayout:
+			orientation: "vertical"
+				AsyncImage:
+					size_hint_x: .2
+					source: '../dend.png'
+					size: self.texture_size
+			
+			
+	BoxLayout:
+		orientation: "vertical"
+		padding: fk.space_x, 10	
+		spacing: 10
+		size_hint_x = self.size[0]/3
+		
+		BoxLayout:
+			orientation: "vertical"
+			
+			size_hint_y: None
+			height: 100
+			
+			Label:
+				id: tsebiso
+				text: ''
+				markup: True
+				size_hint_y: None
+				height: 20
+				
+			TextInput:
+				id: lb
+				hint_text: "Lebitso"
+				multiline: False
+				focus: True
+				on_text_validate: lk.focus = True
+			TextInput:
+				id: lk
+				hint_text: "Lekunutu"
+				multiline: False
+				password: True
+				on_text_validate: root.nnetefatsa_mosebedisi()
+
+	BoxLayout:
+		orientation: "vertical"
+			AsyncImage:
+				size_hint_x: .2
+				source: '../lefatse0.png'
+				size: self.texture_size
+	
+
+	BoxLayout:
+		size_hint_y: None
+		height: 50
+		canvas.before:
+			Color:
+				rgba: (.06,.45,.45, 1)
+			Rectangle:
+				size: self.size	
+				pos: self.pos
+		Label:
+			id: lt 
+			text: "Bupiwe ke Chama Cha Uhuru(CCU)."
+			bold: True
+			size_hint_x: .9
+			
+		SenotloloSephara:
+			text: "x"
+			size_hint_x: .1

@@ -1,0 +1,135 @@
+# file name: hloho.py
+
+<Setswanto@ButtonBehavior+AsyncImage>:
+
+
+<SenotloloSephara@ButtonBehavior+Label>:
+	font_size: 16
+
+<FHloho>:
+	id: fh
+	orientation: 'vertical'
+	spacing: 10
+	space_x: self.size[0]
+	canvas.before:
+		Color:
+			rgba: (.1,.2,.1, 1)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+	BoxLayout:
+		id: mh
+		size_hint_y: None
+		height: 30
+		canvas.before:
+			Color:
+				rgba: (.06,.45,.45, 1)
+			Rectangle:
+				size: self.size
+				pos: self.pos
+				
+		Setswanto:
+			source: '../didiriso/rn_kmt/A27.png'
+			id: qfa
+			on_release: hfa.open(self)
+			size_hint: (.2, None)
+			height: 30
+			
+			Widget:
+				on_parent: hfa.dismiss()
+				
+				DropDown:
+					id: hfa
+					Setswanto:
+						id: hlo
+						source: '../didiriso/rn_kmt/D1.png'
+						size_hint_y: None
+						height: 30
+					Setswanto:
+						id: man
+						source: '../didiriso/rn_kmt/Y1.png'
+						size_hint_y: None
+						height: 30
+					Setswanto:
+						id: pui
+						source: '../didiriso/rn_kmt/F20.png'
+						size_hint_y: None
+						height: 30
+					Setswanto:
+						id: ets
+						source: '../didiriso/rn_kmt/Z9.png'
+						size_hint_y: None
+						height: 30
+			
+		Setswanto:
+			source: '../didiriso/rn_kmt/C10.png'
+			size_hint: (.8, None)
+			height: 30
+
+	ScrollView:
+		id: sv
+		size_hint: (1, None)
+		size : (self.size[0], 560)
+		do_scroll_x: False
+		BoxLayout:
+			id: ktb
+			orientation: "vertical"
+			size_hint_y: None
+			height: 990
+			BoxLayout:
+				size_hint_y: None
+				height: 330
+				BoxLayout:
+					
+					orientation: "vertical"
+					AsyncImage:
+						id: kgw
+						source: '../3f.png'
+						size: self.texture_size
+				
+				BoxLayout:
+					orientation: "vertical"
+					AsyncImage:
+						source: '../dend22.png'
+						size: self.texture_size
+				
+	
+			BoxLayout:
+				orientation: "vertical"
+				size_hint_y: None
+				height: 330
+				AsyncImage:
+					source: '../lefatse0.png'
+					size: self.texture_size
+	
+			BoxLayout:
+				id: dikahare
+				orientation: "vertical"
+				size_hint_y: None
+				size_hint_x: 1
+				height: 300
+				padding: (20, 10)
+		
+				Setswanto:
+					source: '../didiriso/rn_kmt/D12.png'
+					size: self.texture_size
+		
+			BoxLayout:
+				size_hint_y: None
+				height: 30
+				canvas.before:
+					Color:
+						rgba: (.06,.45,.45, 1)
+					Rectangle:
+						size: self.size	
+						pos: self.pos
+				Label:
+					id: lt 
+					text: "Bupiwe ke Chama Cha Uhuru(CCU)."
+					bold: True
+					size_hint_x: .9
+			
+				Setswanto:
+					source: '../didiriso/rn_kmt/G40.png'
+					size_hint_x: .1
